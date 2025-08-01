@@ -49,7 +49,7 @@ const Hero = () => {
       
       <div className="relative z-10 text-left max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 lg:ml-100">
         <div className="max-w-4xl">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-medium mb-5 sm:mb-3 leading-tight text-white">
+          <h1 className="text-2xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-medium mb-5 sm:mb-3 leading-tight text-white">
             José Manuel García Muñoz
           </h1>
           
