@@ -3,14 +3,14 @@ const Projects = () => {
     {
       id: 1,
       title: "Liberty Tattoo Studio",
-      description: "Es una aplicación para un estudio de tatuajes real. Permite a los usuarios consultar tatuadores, ver sus portafolios, reservar citas y conocer mejor el entorno del estudio. Cuenta con un sistema de gestión de citas conectado a una base de datos, para facilitar la comunicación y la experiencia del cliente.",
+      description: "Es una aplicación para un estudio de tatuajes real. Permite a los usuarios consultar tatuadores, ver sus portafolios, reservar citas y conocer mejor el entorno del estudio.",
       tech: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL", "phpMyAdmin", "Xampp"],
       image: "liberty.jpg"
     },
     {
       id: 2,
       title: "Codearts Invoice", 
-      description: "Colaboré en el desarrollo de una aplicación diseñada para la gestión empresarial, enfocada en el control financiero y la administración de facturas. Combina un frontend moderno con un backend robusto para ofrecer una experiencia de usuario fluida y eficiente.",
+      description: "Colaboré en el desarrollo de una aplicación diseñada para la gestión empresarial, enfocada en el control financiero y la administración de facturas.",
       tech: ["Angular", "Tailwind CSS", "Symfony", "PHP", "Docker",],
       image: "codearts1.png"
     },
@@ -31,7 +31,7 @@ const Projects = () => {
   ]
 
   return (
-    <section id="projects" className="py-12 sm:py-16 lg:py-20 bg-gray-50">
+    <section id="projects" className="py-12 sm:py-16 lg:py-20 bg-gray-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-center mb-8 lg:mb-12 text-slate-800">
           Proyectos
@@ -39,7 +39,7 @@ const Projects = () => {
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {projects.map((project) => (
-            <div key={project.id} className="bg-[#f8f6f2] rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div key={project.id} className="bg-[#cdd7f5] rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <img 
                 src={project.image} 
                 alt={project.title}

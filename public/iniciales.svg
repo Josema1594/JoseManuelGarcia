@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+    
+        <defs>
+            <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+                <feDropShadow dx="2" dy="2" stdDeviation="10" flood-color="rgba(0,0,0,0.3)"/>
+            </filter>
+        </defs>
+    <rect width="400" height="400" rx="50" ry="50" fill="#1a5fb4"/>
+    <text x="200" y="200" text-anchor="middle" dominant-baseline="central" 
+          font-family="Playfair Display" font-size="174" font-weight="700" 
+          fill="#ffffff" filter="url(#shadow)">JM</text>
+</svg>
