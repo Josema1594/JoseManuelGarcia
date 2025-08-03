@@ -13,7 +13,7 @@ const Experience = () => {
       position: "Full Stack Developer",
       company: "Task List",
       period: "2025",
-      description: "Desarrollo completo de aplicaciones web desde el frontend hasta el backend y base de datos.",
+      description: "La aplicación es una lista de notas/tareas que permite al usuario crear, buscar, ordenar y gestionar fácilmente sus items. Se pueden añadir nuevas tareas con validación del título, y cada tarea muestra cuándo se creó. Hay búsqueda en tiempo real que ignora mayúsculas y minúsculas para filtrar por nombre. Las tareas se pueden marcar como realizadas; al hacerlo se tachan visualmente con un check y se desplazan automáticamente al final de la lista para mantener foco en lo pendiente. También se pueden eliminar individualmente. El usuario puede ordenar el listado alfabéticamente, tanto de A a Z como de Z a A, con botones claros que disparan esa ordenación en el frontend. La interfaz usa Tailwind para una estética moderna y responsiva, incluyendo fondos, tarjetas, hover y estados deshabilitados. La aplicación se integra con un backend (Symfony) que expone endpoints REST para CRUD, completar todas, ordenadas y recuperación, y se muestran notificaciones (toasts) para feedback al usuario. En conjunto ofrece una experiencia fluida de gestión de notas con funcionalidades de filtrado, ordenación y estado.",
       technologies: ["Angular", "Tailwind CSS", "Symfony", "PHP", "Docker",]
     },
     {
@@ -37,7 +37,7 @@ const Experience = () => {
   return (
     <section id="experience" className="py-8 sm:py-12 lg:py-16 bg-yellow-50">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 text-slate-800">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 text-blue-800">
           Experiencia
         </h2>
         

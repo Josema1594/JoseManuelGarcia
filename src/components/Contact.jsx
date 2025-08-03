@@ -1,8 +1,8 @@
 const Contact = () => {
   return (
-    <section id="contact" className="py-16 px-4 sm:py-20 sm:px-6 lg:py-24 lg:px-8">
+    <section id="contact" className="py-16 px-4 sm:py-20 sm:px-6 lg:py-24 lg:px-8 bg-gradient-to-br from-blue-50 to-blue-100">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-center mb-8 lg:mb-12 text-slate-800">
+        <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-center mb-8 lg:mb-12 text-blue-800">
           Contacto
         </h2>
         
@@ -65,7 +65,7 @@ const Contact = () => {
           </div>
           
           {/* Formulario de contacto */}
-          <div className="bg-white p-6 lg:p-8 rounded-2xl shadow-xl">
+          <div className="bg-white/90 backdrop-blur-sm p-6 lg:p-8 rounded-2xl shadow-xl border border-blue-100">
             <h3 className="text-xl sm:text-2xl font-semibold mb-4 lg:mb-6 text-gray-800">
               Envíame un mensaje
             </h3>
@@ -121,7 +121,7 @@ const Contact = () => {
               
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 lg:py-3 lg:px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 font-semibold text-sm lg:text-base"
+                className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-2 px-4 lg:py-3 lg:px-6 rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300 font-semibold text-sm lg:text-base"
               >
                 Enviar mensaje
               </button>
