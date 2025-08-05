@@ -3,8 +3,7 @@ import { useState, useEffect } from 'react'
 const navItems = [
   { id: 'hero', label: 'INICIO', href: '#hero' },
   { id: 'about', label: 'SOBRE MÍ', href: '#about' },
-  { id: 'projects', label: 'PROYECTOS', href: '#projects' },
-  { id: 'experience', label: 'EXPERIENCIA', href: '#experience' },
+  { id: 'projects', label: 'PROYECTOS & EXPERIENCIA', href: '#projects' },
   { id: 'education', label: 'EDUCACIÓN', href: '#education' },
   { id: 'contact', label: 'CONTACTO', href: '#contact' },
   { id: 'cv', label: 'CV', href: '#cv' }
@@ -57,20 +56,20 @@ const Header = () => {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 pt-2 md:pt-4 px-4">
-      <div className="flex justify-center">
+    <header className="fixed top-0 left-0 right-0 z-50 pt-2 md:pt-4 px-4 opacity-100">
+      <div className="flex justify-end">
         {/* Desktop Navigation */}
-        <nav className="hidden lg:block bg-black/20 backdrop-blur-md rounded-full px-4 xl:px-6 py-2 xl:py-3 border border-white/10">
+        <nav className="hidden lg:block bg-white/30 backdrop-blur-md rounded-2xl px-4 xl:px-6 py-2 xl:py-3 border border-gray-200/50 transform -skew-x-3">
           <ul className="flex items-center space-x-3 xl:space-x-6">
             {navItems.map((item) => (
               <li key={item.id}>
                 <button
                   onClick={() => handleNavClick(item.id)}
                   className={`
-                    px-2 xl:px-3 py-1.5 text-xs xl:text-sm font-medium tracking-wide transition-all duration-300 rounded-full whitespace-nowrap cursor-pointer
+                    px-2 xl:px-3 py-1.5 text-xs xl:text-sm font-medium tracking-wide transition-all duration-300 rounded-lg whitespace-nowrap cursor-pointer
                     ${activeSection === item.id
-                      ? 'bg-white/20 text-white shadow-lg'
-                      : 'text-white/70 hover:text-white hover:bg-white/10'
+                      ? 'bg-blue-500 text-white shadow-lg'
+                      : 'text-gray-700 hover:text-blue-500 hover:bg-blue-50'
                     }
                   `}
                 >
@@ -86,10 +85,10 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="bg-black/20 backdrop-blur-md rounded-full p-3 border border-white/10 text-white cursor-pointer"
+            className="bg-white/30 backdrop-blur-md rounded-xl p-2 border border-gray-200/50 text-gray-700 cursor-pointer transform -skew-x-3"
           >
             <svg 
-              className="w-6 h-6" 
+              className="w-5 h-5" 
               fill="none" 
               stroke="currentColor" 
               viewBox="0 0 24 24"
@@ -104,17 +103,17 @@ const Header = () => {
 
           {/* Mobile Menu Dropdown */}
           {mobileMenuOpen && (
-            <div className="absolute top-16 left-4 right-4 bg-black/90 backdrop-blur-md rounded-2xl border border-white/10 py-4">
-              <ul className="space-y-2">
+            <div className="absolute top-16 right-4 w-56 bg-white/70 backdrop-blur-md rounded-xl border border-gray-200/50 py-3 shadow-lg transform -skew-x-1">
+              <ul className="space-y-1">
                 {navItems.map((item) => (
                   <li key={item.id}>
                     <button
                       onClick={() => handleNavClick(item.id)}
                       className={`
-                        w-full text-left px-6 py-3 text-sm font-medium tracking-wide transition-all duration-300 cursor-pointer
+                        w-full text-left px-4 py-2 text-sm font-medium tracking-wide transition-all duration-300 cursor-pointer
                         ${activeSection === item.id
-                          ? 'bg-white/20 text-white'
-                          : 'text-white/70 hover:text-white hover:bg-white/10'
+                          ? 'bg-blue-500 text-white'
+                          : 'text-gray-700 hover:text-blue-500 hover:bg-blue-50'
                         }
                       `}
                     >

@@ -2,7 +2,10 @@ import React from 'react';
 
 const About = () => {
   return (
-    <section id="about" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-r from-blue-50 to-slate-50">
+    <section 
+      id="about" 
+      className="py-12 sm:py-16 lg:py-20 bg-gradient-to-r from-blue-50 to-slate-50"
+    >
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-center mb-8 lg:mb-12 text-blue-800">
           Sobre mí
@@ -10,21 +13,21 @@ const About = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start">
           {/* Contenido de texto */}
-          <div className="space-y-6 lg:space-y-8 order-2 lg:order-1 text-center lg:text-left lg:pl-24">
+          <div className="space-y-3 lg:space-y-8 order-2 lg:order-1 text-center lg:text-left lg:pl-24">
             <div className="prose prose-sm lg:prose-base max-w-none">
-              <p className="text-xs sm:text-sm lg:text-base text-slate-600 leading-relaxed mb-4">
+              <p className="text-xs sm:text-sm lg:text-base text-slate-600 leading-relaxed mb-2 lg:mb-4">
                 Técnico Superior en Desarrollo de Aplicaciones Web, desarrollo y mantenimiento de soluciones web modernas.
               </p>
               
-              <p className="text-xs sm:text-sm lg:text-base text-slate-600 leading-relaxed mb-4">
+              <p className="text-xs sm:text-sm lg:text-base text-slate-600 leading-relaxed mb-2 lg:mb-4">
                 Me gusta escribir código limpio, reutilizable y escalable, aplicando buenas prácticas y metodologías ágiles. Valoro el trabajo en equipo, la organización y la mejora continua.
               </p>
               
-              <p className="text-xs sm:text-sm lg:text-base text-slate-600 leading-relaxed mb-4">
+              <p className="text-xs sm:text-sm lg:text-base text-slate-600 leading-relaxed mb-2 lg:mb-4">
                 Soy una persona curiosa, proactiva y con una gran capacidad de aprendizaje. Me apasiona el deporte, lo que ha reforzado en mí valores como la constancia, el esfuerzo y el compromiso, que también aplico en mi carrera como desarrollador.
               </p>
               
-              <p className="text-xs sm:text-sm lg:text-base text-slate-600 leading-relaxed mb-4">
+              <p className="text-xs sm:text-sm lg:text-base text-slate-600 leading-relaxed mb-2 lg:mb-4">
                 Actualmente busco oportunidades para crecer profesionalmente en entornos donde pueda aportar mis conocimientos, seguir aprendiendo y colaborar en proyectos desafiantes que aporten valor real.
               </p>
             </div>
@@ -33,7 +36,7 @@ const About = () => {
           {/* Imagen de perfil */}
           <div className="flex justify-center order-1 lg:order-2 lg:mt-8">
             <div className="relative">
-              <div className="w-56 h-72 sm:w-64 sm:h-80 lg:w-80 lg:h-96 rounded-lg bg-gray-200 overflow-hidden shadow-xl">
+              <div className="w-40 h-52 sm:w-48 sm:h-60 md:w-56 md:h-72 lg:w-80 lg:h-96 rounded-lg bg-gray-200 overflow-hidden shadow-xl">
                 <img 
                   src="/cv.jpg" 
                   alt="José Manuel García Muñoz"
@@ -47,8 +50,8 @@ const About = () => {
                   <svg className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
                   </svg>
-                </div>
               </div>
+            </div>
             </div>
           </div>
         </div>
@@ -57,10 +60,10 @@ const About = () => {
         <div className="mt-12 space-y-4 text-center">
           <h3 className="text-base sm:text-lg font-semibold text-slate-800">Tecnologías principales</h3>
           <div className="flex flex-wrap gap-2 sm:gap-3 justify-center">
-            {['React', 'JavaScript/TypeScript', 'Symfony', 'Angular', 'HTML5', 'Tailwind', 'CSS3', 'SQL', 'Git', 'PHP', 'Docker'].map((skill) => (
+            {['Angular', 'React', 'Symfony', 'Tailwind CSS', 'JavaScript/TypeScript', 'PHP', 'HTML5 & CSS3', 'Git'].map((skill) => (
               <span 
                 key={skill}
-                className="px-3 py-1 sm:px-4 sm:py-2 bg-gradient-to-r from-blue-300 to-blue-100 text-slate-700 rounded-full text-xs sm:text-sm border-slate-200 hover:from-slate-200 hover:to-blue-300 transition-all duration-300"
+                className="px-3 py-1 sm:px-4 sm:py-2 bg-gradient-to-r from-blue-500 to-blue-400 text-white rounded-full text-xs sm:text-sm shadow-md hover:from-blue-600 hover:to-blue-500 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
               >
                 {skill}
               </span>

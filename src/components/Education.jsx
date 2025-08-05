@@ -3,30 +3,37 @@ const Education = () => {
     {
       id: 1,
       degree: "Grado Superior en Desarrollo de Aplicaciones Web",
-      institution: "Centro FP Ilerna",
-      period: "2025",
-      description: "Formación integral en desarrollo de software, algoritmos, estructuras de datos y gestión de proyectos tecnológicos."
+      institution: "Realizado en el Centro FP Ilerna",
+      period: "2023-2025",
+      description: ""
     },
     {
       id: 2,
       degree: "Curso de Ofimática. Aplicaciones informáticas de gestión",
-      institution: "Mauprev, S.L.",
+      institution: "Curso realizado en Mauprev, S.L.",
       period: "2024",
-      description: "Especialización en tecnologías web modernas, frameworks JavaScript y desarrollo de APIs."
+      description: ""
     },
     {
       id: 3,
       degree: "Curso de Aprendizaje Cooperativo: fundamentos, técnicas y aplicación en el aula",
-      institution: "Universidad de Antonio de Nebrija",
+      institution: "Curso realizado en la Universidad de Antonio de Nebrija",
       period: "2021",
-      description: "Profundización en el ecosistema React y desarrollo backend con Node.js."
+      description: ""
     },
     {
       id: 4,
-      degree: "Grado en Educación Infantil",
-      institution: "Universidad de Almería",
-      period: "2017",
-      description: "Profundización en el ecosistema React y desarrollo backend con Node.js."
+      degree: "Curso de Actividades extraescolares: bases, tipos y desarrollo",
+      institution: "Curso realizado en la Universidad de Antonio de Nebrija",
+      period: "2020",
+      description: ""
+    },
+    {
+      id: 5,
+      degree: "Grado en Educación Infantil (Plan 2010)",
+      institution: "Carrera realizada en la Universidad de Almería",
+      period: "2013-2017",
+      description: ""
     }
   ]
 

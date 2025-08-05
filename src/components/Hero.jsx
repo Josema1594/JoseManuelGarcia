@@ -51,7 +51,7 @@ const Hero = () => {
       <div className="relative z-10 text-left max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 lg:ml-100">
         <div className="max-w-4xl">
           <h1 className="text-2xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-medium mb-5 sm:mb-3 leading-tight text-white" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
-            José Manuel García Muñoz
+            José Manuel García
           </h1>
           
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-light mb-6 sm:mb-8 leading-relaxed text-white" style={{ textShadow: '2px 2px 6px rgba(0,0,0,0.8)' }}>
