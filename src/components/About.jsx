@@ -7,7 +7,7 @@ const About = () => {
       className="py-12 sm:py-16 lg:py-20 bg-gradient-to-r from-blue-50 to-slate-50"
     >
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-center mb-8 lg:mb-12 text-blue-800">
+        <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-center mb-12 lg:mb-16 text-slate-800">
           Sobre mí
         </h2>
         

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 const navItems = [
   { id: 'hero', label: 'INICIO', href: '#hero' },
   { id: 'about', label: 'SOBRE MÍ', href: '#about' },
-  { id: 'projects', label: 'PROYECTOS & EXPERIENCIA', href: '#projects' },
+  { id: 'projects', label: 'PROYECTOS', href: '#projects' },
   { id: 'education', label: 'EDUCACIÓN', href: '#education' },
   { id: 'contact', label: 'CONTACTO', href: '#contact' },
   { id: 'cv', label: 'CV', href: '#cv' }
@@ -59,7 +59,7 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 pt-2 md:pt-4 px-4 opacity-100">
       <div className="flex justify-end">
         {/* Desktop Navigation */}
-        <nav className="hidden lg:block bg-white/30 backdrop-blur-md rounded-2xl px-4 xl:px-6 py-2 xl:py-3 border border-gray-200/50 transform -skew-x-3">
+        <nav className="hidden lg:block bg-white/30 backdrop-blur-md rounded-2xl px-4 xl:px-6 py-2 xl:py-3 border border-gray-200/50">
           <ul className="flex items-center space-x-3 xl:space-x-6">
             {navItems.map((item) => (
               <li key={item.id}>
@@ -85,7 +85,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="bg-white/30 backdrop-blur-md rounded-xl p-2 border border-gray-200/50 text-gray-700 cursor-pointer transform -skew-x-3"
+            className="bg-white/30 backdrop-blur-md rounded-xl p-2 border border-gray-200/50 text-gray-700 cursor-pointer"
           >
             <svg 
               className="w-5 h-5" 
@@ -103,7 +103,7 @@ const Header = () => {
 
           {/* Mobile Menu Dropdown */}
           {mobileMenuOpen && (
-            <div className="absolute top-16 right-4 w-56 bg-white/70 backdrop-blur-md rounded-xl border border-gray-200/50 py-3 shadow-lg transform -skew-x-1">
+            <div className="absolute top-16 right-4 w-56 bg-white/70 backdrop-blur-md rounded-xl border border-gray-200/50 py-3 shadow-lg">
               <ul className="space-y-1">
                 {navItems.map((item) => (
                   <li key={item.id}>

@@ -1,69 +1,91 @@
+import React from 'react';
+import { DocumentArrowDownIcon, EyeIcon, BriefcaseIcon, AcademicCapIcon, CodeBracketIcon } from '@heroicons/react/24/outline';
+
 const CV = () => {
   return (
-    <section id="cv" className="py-12 sm:py-16 lg:py-20 bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-center mb-8 lg:mb-12 text-blue-800">
+    <section id="cv" className="py-16 px-4 sm:py-20 sm:px-6 lg:py-24 lg:px-8 bg-gradient-to-br from-slate-50 to-slate-100">
+      <div className="max-w-5xl mx-auto">
+        <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-center mb-12 lg:mb-16 text-slate-800">
           Curriculum Vitae
         </h2>
         
-        <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-8 sm:mb-12 leading-relaxed max-w-3xl mx-auto">
+        <p className="text-base sm:text-lg lg:text-xl text-slate-600 mb-12 sm:mb-16 leading-relaxed max-w-3xl mx-auto text-center">
           Descarga mi CV completo para conocer más detalles sobre mi experiencia, 
           educación y habilidades técnicas.
         </p>
         
-        <div className="bg-white rounded-xl shadow-lg p-6 sm:p-8 inline-block max-w-sm mx-auto">
-          <div className="mb-6">
-            <svg className="w-12 h-12 sm:w-16 sm:h-16 text-blue-600 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clipRule="evenodd"/>
-            </svg>
-            <h3 className="text-lg sm:text-2xl font-semibold text-gray-800 mb-2">
+        <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-slate-200 p-8 sm:p-10 max-w-md mx-auto mb-12 sm:mb-16">
+          <div className="mb-8">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-slate-600 to-slate-700 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+              <DocumentArrowDownIcon className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+            </div>
+            <h3 className="text-lg sm:text-2xl font-bold text-slate-800 mb-3 text-center px-2 break-words">
               CV_JoseManuelGarcia.pdf
             </h3>
-            <p className="text-sm sm:text-base text-gray-600">
-              Última actualización: Julio 2025
-            </p>
+            <div className="text-center">
+              <p className="text-sm sm:text-base text-slate-500 bg-slate-50 px-3 py-1 rounded-full inline-block">
+                Última actualización: Agosto 2025
+              </p>
+            </div>
           </div>
           
-          <div className="space-y-3 sm:space-y-4">
-            <button className="w-full bg-blue-600 text-white py-2 sm:py-3 px-6 sm:px-8 rounded-lg hover:bg-blue-700 transition-colors font-medium text-sm sm:text-lg">
+          <div className="space-y-4">
+            <a 
+              href="/CV_JoseManuelGarcia.pdf" 
+              download="CV_JoseManuelGarcia.pdf"
+              className="w-full bg-gradient-to-r from-slate-600 to-slate-700 text-white py-3 sm:py-4 px-6 sm:px-8 rounded-xl hover:from-slate-700 hover:to-slate-800 transition-all duration-300 font-semibold text-sm sm:text-base inline-flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            >
+              <DocumentArrowDownIcon className="w-5 h-5" />
               Descargar CV (PDF)
-            </button>
+            </a>
             
-            <button className="w-full border-2 border-blue-600 text-blue-600 py-2 sm:py-3 px-6 sm:px-8 rounded-lg hover:bg-blue-50 transition-colors font-medium text-sm sm:text-lg">
+            <a 
+              href="/CV_JoseManuelGarcia.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-full border-2 border-slate-600 text-slate-600 py-3 sm:py-4 px-6 sm:px-8 rounded-xl hover:bg-slate-50 transition-all duration-300 font-semibold text-sm sm:text-base inline-flex items-center justify-center gap-2 hover:shadow-lg transform hover:-translate-y-0.5"
+            >
+              <EyeIcon className="w-5 h-5" />
               Ver CV Online
-            </button>
+            </a>
           </div>
         </div>
         
-        <div className="mt-8 sm:mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 text-center">
-          <div className="bg-white rounded-lg p-4 sm:p-6 shadow-sm">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-              <svg className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-              </svg>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8 text-center">
+          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-lg border border-slate-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg">
+              <BriefcaseIcon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
             </div>
-            <h4 className="text-base sm:text-lg font-semibold text-gray-800 mb-2">Experiencia</h4>
-            <p className="text-sm sm:text-base text-gray-600">+3 años en desarrollo web</p>
+            <h4 className="text-lg sm:text-xl font-bold text-slate-800 mb-3">Experiencia</h4>
+            <p className="text-sm sm:text-base text-slate-600 leading-relaxed">2 años en desarrollo web</p>
           </div>
           
-          <div className="bg-white rounded-lg p-4 sm:p-6 shadow-sm">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-              <svg className="w-5 h-5 sm:w-6 sm:h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3z"/>
-              </svg>
+          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-lg border border-slate-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg">
+              <AcademicCapIcon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
             </div>
-            <h4 className="text-base sm:text-lg font-semibold text-gray-800 mb-2">Educación</h4>
-            <p className="text-sm sm:text-base text-gray-600">Ingeniería en Sistemas</p>
+            <h4 className="text-lg sm:text-xl font-bold text-slate-800 mb-3">Educación</h4>
+            <p className="text-sm sm:text-base text-slate-600 leading-relaxed">Desarrollador de Aplicaciones Web</p>
           </div>
           
-          <div className="bg-white rounded-lg p-4 sm:p-6 shadow-sm">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-              <svg className="w-5 h-5 sm:w-6 sm:h-6 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd"/>
-              </svg>
+          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-lg border border-slate-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg">
+              <CodeBracketIcon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
             </div>
-            <h4 className="text-base sm:text-lg font-semibold text-gray-800 mb-2">Habilidades</h4>
-            <p className="text-sm sm:text-base text-gray-600">Frontend & Backend</p>
+            <h4 className="text-lg sm:text-xl font-bold text-slate-800 mb-3">Habilidades</h4>
+            <p className="text-sm sm:text-base text-slate-600 leading-relaxed">Frontend & Backend</p>
+          </div>
+        </div>
+        
+        {/* Footer mejorado */}
+        <div className="mt-16 sm:mt-20 pt-8 border-t border-slate-200">
+          <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-slate-200 text-center">
+            <p className="text-sm sm:text-base text-slate-600 font-medium">
+              © 2025 José Manuel García Muñoz. Todos los derechos reservados.
+            </p>
+            <p className="text-xs sm:text-sm text-slate-500 mt-2">
+              Portfolio desarrollado con React, Vite y Tailwind CSS
+            </p>
           </div>
         </div>
       </div>
