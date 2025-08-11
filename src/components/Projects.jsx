@@ -82,23 +82,23 @@ const Projects = () => {
   return (
     <section id="projects" className="py-12 sm:py-16 lg:py-20 bg-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-center mb-12 lg:mb-16 text-slate-800">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 lg:mb-16 text-slate-800">
           Proyectos & Experiencia
         </h2>
         
         {categoryOrder.map((category) => (
           groupedProjects[category] && (
-            <div key={category} className="mb-16">
-              <div className="text-center mb-10">
+            <div key={category} className="mb-12 sm:mb-16">
+              <div className="text-center mb-6 sm:mb-8 lg:mb-10">
                 <div className="relative">
-                  {/* Línea decorativa */}
-                  <div className="absolute inset-0 flex items-center">
-                    <div className="w-full border-t-2 border-gradient-to-r from-transparent via-slate-300 to-transparent opacity-30"></div>
+                  {/* Línea decorativa - solo desktop */}
+                  <div className="hidden lg:flex absolute inset-0 items-center">
+                    <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent opacity-30"></div>
                   </div>
                   {/* Título de categoría */}
                   <div className="relative flex justify-center">
-                    <div className="bg-gradient-to-r from-slate-700 to-slate-800 text-white px-8 py-4 rounded-2xl shadow-xl border-4 border-white">
-                      <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-wide">
+                    <div className="bg-gradient-to-r from-slate-700 to-slate-800 text-white px-4 sm:px-6 lg:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl shadow-xl border-2 sm:border-4 border-white">
+                      <h3 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold tracking-wide">
                         {category}
                       </h3>
                       <div className="w-full h-1 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mt-2"></div>
@@ -106,28 +106,34 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
-              <div className="space-y-8">
+
+              <div className="space-y-6 sm:space-y-8">
                 {groupedProjects[category].map((project) => (
-                  <div key={project.id} className="group bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-l-4 border-gradient-to-b from-blue-500 to-purple-600 flex flex-col lg:flex-row">
+                  <div key={project.id} className="group bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 sm:hover:-translate-y-2 border-l-4 flex flex-col md:flex-row">
+                    {/* Borde lateral colorido */}
+                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 to-purple-600" aria-hidden="true"></div>
+
                     {project.image && (
-                      <div className="lg:w-2/5 cursor-pointer group-hover:scale-105 transition-transform duration-500 relative overflow-hidden">
+                      <div className="w-full md:w-2/5 cursor-pointer md:group-hover:scale-105 transition-transform duration-500 relative overflow-hidden order-1 md:order-none">
                         <a 
                           href={`/${project.image}`}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="block h-64 lg:h-80 w-full relative"
+                          className="block h-48 sm:h-56 md:h-64 lg:h-80 w-full relative"
                         >
                           <img 
                             src={`/${project.image}`}
                             alt={project.title}
+                            loading="lazy"
+                            decoding="async"
                             className="w-full h-full object-cover"
                           />
                           {/* Overlay con gradiente */}
                           <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
                           {/* Icono de zoom */}
                           <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
-                            <div className="bg-white/95 backdrop-blur-sm rounded-full p-3 shadow-lg transform scale-75 group-hover:scale-100 transition-transform duration-300">
-                              <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div className="bg-white/95 backdrop-blur-sm rounded-full p-2 sm:p-3 shadow-lg transform scale-75 group-hover:scale-100 transition-transform duration-300">
+                              <svg className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
                               </svg>
                             </div>
@@ -135,24 +141,25 @@ const Projects = () => {
                         </a>
                       </div>
                     )}
-                    <div className="flex-1 p-6 lg:p-8 bg-gradient-to-br from-slate-50 via-white to-blue-50/30">
-                      <div className="flex justify-between items-start mb-4">
+
+                    <div className="flex-1 p-5 sm:p-6 lg:p-8 bg-gradient-to-br from-slate-50 via-white to-blue-50/30">
+                      <div className="flex justify-between items-start mb-3 sm:mb-4">
                         <div>
-                          <h4 className="text-xl lg:text-2xl font-bold text-slate-800 group-hover:text-blue-700 transition-colors duration-300">
+                          <h4 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-800 group-hover:text-blue-700 transition-colors duration-300">
                             {project.title}
                           </h4>
-                          <div className="flex items-center gap-3 mt-2">
-                            <span className="text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 px-3 py-1 rounded-full shadow-sm">
+                          <div className="flex items-center gap-2 sm:gap-3 mt-2">
+                            <span className="text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 px-2.5 sm:px-3 py-1 rounded-full shadow-sm">
                               {project.role}
                             </span>
-                            <span className="text-sm font-medium text-slate-600 bg-slate-100 px-3 py-1 rounded-full">
+                            <span className="text-xs sm:text-sm font-medium text-slate-600 bg-slate-100 px-2.5 sm:px-3 py-1 rounded-full">
                               {project.year}
                             </span>
                           </div>
                         </div>
                       </div>
                       
-                      <p className="text-base text-slate-700 mb-4 leading-relaxed">
+                      <p className="text-sm sm:text-base text-slate-700 mb-3 sm:mb-4 leading-relaxed">
                         {project.description}
                       </p>
                       
@@ -169,10 +176,11 @@ const Projects = () => {
                       {project.detailedDescription && (
                         <button
                           onClick={() => toggleExpanded(project.id)}
-                          className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-all duration-200 cursor-pointer group-hover:translate-x-1 mb-4"
+                          aria-expanded={!!expandedProjects[project.id]}
+                          className="inline-flex items-center text-sm sm:text-base text-blue-600 hover:text-blue-700 font-semibold transition-all duration-200 cursor-pointer group-hover:translate-x-1 mb-3 sm:mb-4"
                         >
                           <svg 
-                            className={`w-5 h-5 mr-2 transition-transform duration-200 ${
+                            className={`w-4 h-4 sm:w-5 sm:h-5 mr-2 transition-transform duration-200 ${
                               expandedProjects[project.id] ? 'rotate-180' : ''
                             }`}
                             fill="none" 
@@ -192,7 +200,7 @@ const Projects = () => {
                         {project.tech.map((tech, index) => (
                           <span 
                             key={index}
-                            className="px-4 py-2 bg-gradient-to-r from-slate-100 to-slate-50 text-slate-700 rounded-full text-sm font-medium border border-slate-200 hover:border-slate-300 hover:shadow-md transition-all duration-200 hover:-translate-y-0.5"
+                            className="px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-slate-100 to-slate-50 text-slate-700 rounded-full text-xs sm:text-sm font-medium border border-slate-200 hover:border-slate-300 hover:shadow-md transition-all duration-200 hover:-translate-y-0.5"
                           >
                             {tech}
                           </span>
