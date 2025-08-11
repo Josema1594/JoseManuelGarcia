@@ -1,4 +1,3 @@
-import React from 'react';
 import { DocumentArrowDownIcon, EyeIcon, BriefcaseIcon, AcademicCapIcon, CodeBracketIcon } from '@heroicons/react/24/outline';
 
 const CV = () => {
@@ -20,7 +19,7 @@ const CV = () => {
               <DocumentArrowDownIcon className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
             </div>
             <h3 className="text-lg sm:text-2xl font-bold text-slate-800 mb-3 text-center px-2 break-words">
-              CV_JoseManuelGarcia.pdf
+              Cv_JoseManuelGarcia.pdf
             </h3>
             <div className="text-center">
               <p className="text-sm sm:text-base text-slate-500 bg-slate-50 px-3 py-1 rounded-full inline-block">
@@ -31,8 +30,8 @@ const CV = () => {
           
           <div className="space-y-4">
             <a 
-              href="/CV_JoseManuelGarcia.pdf" 
-              download="CV_JoseManuelGarcia.pdf"
+              href="/Cv_JoseManuelGarcia.pdf"
+              download="Cv_JoseManuelGarcia.pdf"
               className="w-full bg-gradient-to-r from-slate-600 to-slate-700 text-white py-3 sm:py-4 px-6 sm:px-8 rounded-xl hover:from-slate-700 hover:to-slate-800 transition-all duration-300 font-semibold text-sm sm:text-base inline-flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               <DocumentArrowDownIcon className="w-5 h-5" />
@@ -40,7 +39,7 @@ const CV = () => {
             </a>
             
             <a 
-              href="/CV_JoseManuelGarcia.pdf" 
+              href="/Cv_JoseManuelGarcia.pdf"
               target="_blank" 
               rel="noopener noreferrer"
               className="w-full border-2 border-slate-600 text-slate-600 py-3 sm:py-4 px-6 sm:px-8 rounded-xl hover:bg-slate-50 transition-all duration-300 font-semibold text-sm sm:text-base inline-flex items-center justify-center gap-2 hover:shadow-lg transform hover:-translate-y-0.5"
