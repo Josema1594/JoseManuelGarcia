@@ -58,13 +58,3 @@ portfolio/
 ## 🎨 Tailwind CSS
 
 Este proyecto utiliza Tailwind CSS para el diseño. Las clases utilitarias están disponibles en todos los componentes.
-
-## 📝 Próximos Pasos
-
-- [ ] Crear componente de navegación
-- [ ] Implementar sección Hero
-- [ ] Desarrollar sección About
-- [ ] Añadir sección de proyectos
-- [ ] Crear formulario de contacto
-- [ ] Implementar diseño responsive
-- [ ] Optimizar para SEO
