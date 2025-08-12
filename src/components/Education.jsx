@@ -1,4 +1,7 @@
+import { useTranslation } from 'react-i18next'
+
 const Education = () => {
+  const { t } = useTranslation()
   const education = [
     {
       id: 1,
@@ -41,7 +44,7 @@ const Education = () => {
     <section id="education" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-center mb-12 lg:mb-16 text-slate-800">
-          Educación & Formación
+          {t('education.heading')}
         </h2>
         
         <div className="relative">
@@ -72,13 +75,13 @@ const Education = () => {
                         </div>
                         
                         <h3 className="text-xl lg:text-2xl font-bold text-slate-800 group-hover:text-blue-700 transition-colors duration-300 mb-3 leading-tight">
-                          {edu.degree}
+                          {t(`education.items.${edu.id}.degree`, { defaultValue: edu.degree })}
                         </h3>
                         
                         <div className="flex items-center gap-2 mb-4">
                           <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full"></div>
                           <p className="text-base font-medium text-slate-600">
-                            {edu.institution}
+                            {t(`education.items.${edu.id}.institution`, { defaultValue: edu.institution })}
                           </p>
                         </div>
                       </div>

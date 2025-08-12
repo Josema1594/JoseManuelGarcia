@@ -1,6 +1,24 @@
 import React from 'react';
+import { SiAngular, SiReact, SiSymfony, SiTailwindcss, SiJavascript, SiTypescript, SiPhp, SiHtml5, SiCss3, SiGit } from 'react-icons/si';
+import { Trans, useTranslation } from 'react-i18next'
 
 const About = () => {
+  // Lista de tecnologías con sus iconos
+  const techIcons = [
+    { name: 'Angular', Icon: SiAngular, color: '#DD0031' },
+    { name: 'React', Icon: SiReact, color: '#61DAFB' },
+    { name: 'Symfony', Icon: SiSymfony, color: '#000000' },
+    { name: 'Tailwind CSS', Icon: SiTailwindcss, color: '#38BDF8' },
+    { name: 'JavaScript', Icon: SiJavascript, color: '#F7DF1E' },
+    { name: 'TypeScript', Icon: SiTypescript, color: '#3178C6' },
+    { name: 'PHP', Icon: SiPhp, color: '#777BB4' },
+    { name: 'HTML5', Icon: SiHtml5, color: '#E34F26' },
+    { name: 'CSS3', Icon: SiCss3, color: '#1572B6' },
+    { name: 'Git', Icon: SiGit, color: '#F05032' }
+  ];
+
+  const { t } = useTranslation()
+
   return (
     <section 
       id="about" 
@@ -8,27 +26,27 @@ const About = () => {
     >
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-center mb-6 sm:mb-12 lg:mb-16 text-slate-800">
-          Sobre mí
+          {t('about.heading')}
         </h2>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start">
           {/* Contenido de texto */}
-          <div className="space-y-3 lg:space-y-8 order-2 lg:order-1 text-center lg:text-left lg:pl-24 max-w-md sm:max-w-lg mx-auto px-4 sm:px-6 lg:max-w-none lg:px-0">
+          <div className="space-y-3 lg:space-y-8 order-2 lg:order-1 text-left lg:text-left lg:pl-24 max-w-md sm:max-w-lg mx-auto px-4 sm:px-6 lg:max-w-none lg:px-0">
             <div className="prose prose-sm lg:prose-base max-w-none">
               <p className="text-xs sm:text-sm lg:text-base text-slate-600 leading-relaxed mb-2 lg:mb-4">
-                Técnico Superior en Desarrollo de Aplicaciones Web, desarrollo y mantenimiento de soluciones web modernas.
+                <Trans i18nKey="about.p1" components={{ b: <span className="font-semibold" /> }} />
               </p>
               
               <p className="text-xs sm:text-sm lg:text-base text-slate-600 leading-relaxed mb-2 lg:mb-4">
-                Me gusta escribir código limpio, reutilizable y escalable, aplicando buenas prácticas y metodologías ágiles. Valoro el trabajo en equipo, la organización y la mejora continua.
+                <Trans i18nKey="about.p2" components={{ b: <span className="font-semibold" /> }} />
               </p>
               
               <p className="text-xs sm:text-sm lg:text-base text-slate-600 leading-relaxed mb-2 lg:mb-4">
-                Soy una persona curiosa, proactiva y con una gran capacidad de aprendizaje. Me apasiona el deporte, lo que ha reforzado en mí valores como la constancia, el esfuerzo y el compromiso, que también aplico en mi carrera como desarrollador.
+                <Trans i18nKey="about.p3" components={{ b: <span className="font-semibold" /> }} />
               </p>
               
               <p className="text-xs sm:text-sm lg:text-base text-slate-600 leading-relaxed mb-2 lg:mb-4">
-                Actualmente busco oportunidades para crecer profesionalmente en entornos donde pueda aportar mis conocimientos, seguir aprendiendo y colaborar en proyectos desafiantes que aporten valor real.
+                <Trans i18nKey="about.p4" components={{ b: <span className="font-semibold" /> }} />
               </p>
             </div>
           </div>
@@ -58,34 +76,28 @@ const About = () => {
 
         {/* Skills badges - Debajo de la foto */}
         <div className="mt-12 space-y-4 text-center">
-          <h3 className="text-base sm:text-lg font-semibold text-slate-800">Tecnologías principales</h3>
-          <div className="flex flex-wrap gap-2 sm:gap-3 justify-center">
-            {['Angular', 'React', 'Symfony', 'Tailwind CSS', 'JavaScript/TypeScript', 'PHP', 'HTML5 & CSS3', 'Git'].map((skill) => (
-              <span 
-                key={skill}
-                className="px-3 py-1 sm:px-4 sm:py-2 bg-gradient-to-r from-blue-500 to-blue-400 text-white rounded-full text-xs sm:text-sm shadow-md hover:from-blue-600 hover:to-blue-500 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
+          <h3 className="text-base sm:text-lg font-semibold text-slate-800">{t('about.skills')}</h3>
+          <ul className="mx-auto max-w-3xl grid grid-cols-4 sm:grid-cols-5 md:grid-cols-5 lg:grid-cols-5 gap-2.5 sm:gap-3 justify-items-center list-none p-0">
+            {techIcons.map(({ name, Icon: TechIcon, color }) => (
+              <li
+                key={name}
+                title={name}
+                className="group flex items-center gap-2 rounded-xl border border-slate-200/80 bg-white/70 backdrop-blur-sm px-3 py-2 sm:px-3.5 sm:py-2.5 shadow-sm hover:shadow-md transition-all duration-200 transform-gpu hover:-translate-y-0.5"
               >
-                {skill}
-              </span>
+                {React.createElement(TechIcon, {
+                  className: "w-5 h-5 sm:w-6 sm:h-6 drop-shadow-[0_1px_1px_rgba(0,0,0,0.12)]",
+                  style: { color },
+                  'aria-hidden': true,
+                })}
+                <span className="hidden md:inline text-[13px] sm:text-sm font-medium text-slate-700">{name}</span>
+                <span className="sr-only">{name}</span>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
         
-        {/* CTA Buttons - Centrados en la página */}
-        <div className="flex flex-col sm:flex-row gap-4 pt-8 justify-center items-center">
-          <button 
-            onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-            className="px-6 py-3 sm:px-8 sm:py-3 bg-gradient-to-r  from-blue-400 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 font-semibold text-base shadow-lg hover:shadow-xl transform hover:-translate-y-1 cursor-pointer"
-          >
-            Ver mis proyectos
-          </button>
-          <button 
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="px-6 py-3 sm:px-8 sm:py-3 border-2 border-slate-600 text-slate-600 rounded-lg hover:bg-slate-600 hover:text-white transition-all duration-300 font-semibold text-sm cursor-pointer"
-          >
-            Contactar
-          </button>
-        </div>
+        {/* CTA Buttons - Centrados en la página (eliminado) */}
+        {/* Se han retirado los botones de CTA según solicitud */}
       </div>
     </section>
   );

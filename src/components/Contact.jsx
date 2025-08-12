@@ -1,12 +1,57 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { EnvelopeIcon, PhoneIcon, MapPinIcon } from '@heroicons/react/24/outline';
+import { useTranslation } from 'react-i18next'
 
 const Contact = () => {
+  const { t } = useTranslation()
+  const [status, setStatus] = useState('idle') // idle | loading | success | error
+
+  // Añade mensajes de validación custom por campo e idioma
+  const setFieldValidity = (e, field) => {
+    const el = e.target
+    if (el.validity.valueMissing) {
+      el.setCustomValidity(t(`contact.validation.${field}Required`))
+    } else if (field === 'email' && el.validity.typeMismatch) {
+      el.setCustomValidity(t('contact.validation.emailInvalid'))
+    } else {
+      el.setCustomValidity('')
+    }
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const form = e.currentTarget
+
+    // Si no es válido, mostramos los mensajes localizados y no enviamos
+    if (!form.checkValidity()) {
+      form.reportValidity()
+      return
+    }
+
+    setStatus('loading')
+    const data = new FormData(form)
+    try {
+      const res = await fetch('https://formspree.io/f/xldlppbv', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: data,
+      })
+      if (res.ok) {
+        setStatus('success')
+        form.reset()
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
+  }
+
   return (
     <section id="contact" className="py-16 px-4 sm:py-20 sm:px-6 lg:py-24 lg:px-8 bg-gradient-to-br from-slate-50 to-slate-100">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-center mb-12 lg:mb-16 text-slate-800">
-          Contacto
+          {t('contact.heading')}
         </h2>
         
         <div className="space-y-12 lg:space-y-16">
@@ -19,7 +64,7 @@ const Contact = () => {
                   <EnvelopeIcon className="w-5 h-5 text-white" />
                 </div>
                 <h3 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-semibold text-slate-800 text-center px-2 break-words">
-                  Información de contacto
+                  {t('contact.infoHeading')}
                 </h3>
               </div>
               
@@ -42,7 +87,7 @@ const Contact = () => {
                   <div className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
                     <MapPinIcon className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 text-white" />
                   </div>
-                  <span className="text-xs sm:text-sm lg:text-base text-slate-600 text-center whitespace-nowrap">Almería,&nbsp;España</span>
+                  <span className="text-xs sm:text-sm lg:text-base text-slate-600 text-center whitespace-nowrap">{t('hero.location')}</span>
                 </div>
               </div>
             </div>
@@ -56,7 +101,7 @@ const Contact = () => {
                   </svg>
                 </div>
                 <h4 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-semibold text-slate-800 text-center px-2 break-words">
-                  Sígueme en redes sociales
+                  {t('contact.socialHeading')}
                 </h4>
               </div>
               <div className="flex justify-center space-x-2 sm:space-x-4 lg:space-x-6">
@@ -87,75 +132,95 @@ const Contact = () => {
             <div className="bg-white/90 backdrop-blur-sm p-6 lg:p-8 rounded-2xl shadow-xl border border-slate-200">
               <div className="text-center">
                 <h3 className="text-xl sm:text-2xl font-semibold mb-6 lg:mb-8 text-slate-800">
-                  Envíame un mensaje
+                  {t('contact.formHeading')}
                 </h3>
               </div>
+
+              {/* Alertas */}
+              {status === 'success' && (
+                <div className="mb-4 rounded-lg border border-emerald-200 bg-emerald-50 text-emerald-700 px-4 py-3" role="status" aria-live="polite">
+                  {t('contact.success')}
+                </div>
+              )}
+              {status === 'error' && (
+                <div className="mb-4 rounded-lg border border-rose-200 bg-rose-50 text-rose-700 px-4 py-3" role="alert" aria-live="assertive">
+                  {t('contact.error')}
+                </div>
+              )}
             
-              
-              <form action="https://formspree.io/f/xldlppbv" method="POST" className="space-y-4 lg:space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-4 lg:space-y-5">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-1">
-                      Nombre
+                      {t('contact.name')}
                     </label>
                     <input
                       type="text"
                       id="name"
                       name="name"
                       required
+                      onInvalid={(e) => setFieldValidity(e, 'name')}
+                      onInput={(e) => e.target.setCustomValidity('')}
                       className="w-full px-3 py-2 lg:px-4 lg:py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent text-sm lg:text-base"
-                      placeholder="Tu nombre"
+                      placeholder={t('contact.namePlaceholder')}
                     />
                   </div>
                   
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-1">
-                      Email
+                      {t('contact.email')}
                     </label>
                     <input
                       type="email"
                       id="email"
                       name="email"
                       required
+                      onInvalid={(e) => setFieldValidity(e, 'email')}
+                      onInput={(e) => e.target.setCustomValidity('')}
                       className="w-full px-3 py-2 lg:px-4 lg:py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent text-sm lg:text-base"
-                      placeholder="tu@email.com"
+                      placeholder={t('contact.emailPlaceholder')}
                     />
                   </div>
                 </div>
                 
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-slate-700 mb-1">
-                    Asunto
+                    {t('contact.subject')}
                   </label>
                   <input
                     type="text"
                     id="subject"
                     name="subject"
                     required
+                    onInvalid={(e) => setFieldValidity(e, 'subject')}
+                    onInput={(e) => e.target.setCustomValidity('')}
                     className="w-full px-3 py-2 lg:px-4 lg:py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent text-sm lg:text-base"
-                    placeholder="Asunto del mensaje"
+                    placeholder={t('contact.subjectPlaceholder')}
                   />
                 </div>
                 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-1">
-                    Mensaje
+                    {t('contact.message')}
                   </label>
                   <textarea
                     id="message"
                     name="message"
                     rows="3"
                     required
+                    onInvalid={(e) => setFieldValidity(e, 'message')}
+                    onInput={(e) => e.target.setCustomValidity('')}
                     className="w-full px-3 py-2 lg:px-4 lg:py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent resize-none text-sm lg:text-base"
-                    placeholder="Escribe tu mensaje aquí..."
+                    placeholder={t('contact.messagePlaceholder')}
                   ></textarea>
                 </div>
                 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-slate-600 to-slate-700 text-white py-2.5 px-4 lg:py-3 lg:px-6 rounded-lg hover:from-slate-700 hover:to-slate-800 transition-all duration-300 font-semibold text-sm lg:text-base shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                  disabled={status === 'loading'}
+                  className={`w-full bg-gradient-to-r from-slate-600 to-slate-700 text-white py-2.5 px-4 lg:py-3 lg:px-6 rounded-lg transition-all duration-300 font-semibold text-sm lg:text-base shadow-lg transform ${status === 'loading' ? 'opacity-70 cursor-not-allowed' : 'hover:from-slate-700 hover:to-slate-800 hover:shadow-xl hover:-translate-y-0.5'}`}
                 >
-                  Enviar mensaje
+                  {status === 'loading' ? t('contact.sending') : t('contact.send')}
                 </button>
               </form>
             </div>

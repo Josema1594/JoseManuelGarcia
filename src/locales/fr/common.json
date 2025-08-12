@@ -1,0 +1,119 @@
+{
+  "nav": { "home": "ACCUEIL", "about": "À PROPOS", "projects": "PROJETS", "education": "FORMATION", "contact": "CONTACT", "cv": "CV" },
+  "hero": {
+    "name": "José Manuel García",
+    "title": "Technicien supérieur en développement d'applications web",
+    "subtitle1": "Développeur Web Full Stack",
+    "subtitle2": "Passionné de sport, de technologie et de défis créatifs",
+    "subtitle3": "Je conçois et développe des solutions web modernes, fonctionnelles et sécurisées",
+    "cta": "Voir mes projets",
+    "location": "Almería, Espagne"
+  },
+  "cv": {
+    "download": "Télécharger le PDF",
+    "viewOnline": "Voir en ligne",
+    "section": {
+      "heading": "Curriculum Vitae",
+      "intro": "Téléchargez mon CV complet pour en savoir plus sur mon expérience, ma formation et mes compétences techniques.",
+      "lastUpdated": "Dernière mise à jour : Août 2025",
+      "stats": {
+        "experience": { "title": "Expérience", "value": "2 ans en développement web" },
+        "education": { "title": "Éducation", "value": "Développeur d'applications web" },
+        "skills": { "title": "Compétences", "value": "Frontend & Backend" }
+      }
+    },
+    "footer": {
+      "rights": "© 2025 José Manuel García Muñoz. Tous droits réservés.",
+      "builtWith": "Portfolio développé avec React, Vite et Tailwind CSS"
+    }
+  },
+  "about": {
+    "heading": "À propos de moi",
+    "p1": "<b>Technicien supérieur en développement d'applications web</b>, je développe et maintiens des solutions web modernes.",
+    "p2": "J'aime écrire du code propre, réutilisable et évolutif, en appliquant les bonnes pratiques et les méthodologies agiles. <b>J'apprécie le travail d'équipe</b>, l'organisation et l'amélioration continue.",
+    "p3": "Je suis une personne curieuse et proactive avec une grande capacité d'apprentissage. Je suis passionné par le sport, ce qui a renforcé chez moi des valeurs telles que la <b>constance, l'effort et l'engagement</b>, que j'applique également à ma carrière de développeur.",
+    "p4": "Actuellement, je <b>cherche des opportunités pour évoluer professionnellement</b> dans des environnements où je peux apporter mes connaissances, continuer à apprendre et collaborer à des projets stimulants qui apportent une réelle valeur.",
+    "skills": "Technologies principales"
+  },
+  "projects": {
+    "heading": "Projets & Expérience",
+    "categories": {
+      "professional": "Expérience Professionnelle",
+      "academic": "Projet Académique",
+      "personal": "Projet Personnel"
+    },
+    "details": { "show": "Voir les détails", "hide": "Masquer les détails" },
+    "items": {
+      "codearts-invoice": {
+        "description": "Lors de mon stage, j'ai collaboré au développement d'une application métier pour la gestion financière et l'administration des factures.",
+        "detailed": "Développement d'une application web complète pour la gestion financière d'entreprise avec tableau de bord interactif et visualisation des données en temps réel. L'application permet le contrôle intégral des factures avec différents statuts, la génération automatique de rapports PDF et le filtrage par périodes. Elle inclut des métriques clés telles que les revenus totaux, les factures en attente, payées et échues, avec des graphiques dynamiques pour l'analyse des performances par gestionnaire."
+      },
+      "liberty-tattoo-studio": {
+        "description": "Développement complet d'une application web pour un véritable studio de tatouage. Système de gestion des tatoueurs, portfolios, prise de rendez-vous.",
+        "detailed": "Développement d'un site professionnel pour Liberty Tattoo Studio, un studio de tatouage réel situé à Almería. La plateforme permet de gérer les rendez-vous en ligne, de présenter le portfolio de chaque artiste et d'offrir un contenu visuel attrayant. Elle inclut des pages personnalisées pour les artistes et un système de contact direct avec les clients. Conçue pour améliorer la présence numérique de l'entreprise et optimiser sa gestion quotidienne. Elle comprend un système de gestion de rendez-vous connecté à une base de données pour faciliter la communication et l'expérience client. Projet réalisé en collaboration directe avec le propriétaire du studio."
+      },
+      "task-list-manager": {
+        "description": "Application complète de gestion de tâches avec recherche avancée, tri et organisation.",
+        "detailed": "L'application est une liste de notes qui permet d'ajouter de nouvelles tâches avec validation du titre. Une recherche en temps réel insensible à la casse filtre par nom. Les tâches peuvent être marquées comme terminées; elles sont alors barrées visuellement avec une coche et déplacées automatiquement en fin de liste pour garder l'accent sur les éléments en attente. Elles peuvent également être supprimées individuellement. L'utilisateur peut trier la liste alphabétiquement, de A à Z et de Z à A, à l'aide de boutons clairs déclenchant ce tri côté frontend. L'application s'intègre à un backend (Symfony) et affiche des toasts pour le feedback utilisateur. Dans l'ensemble, elle offre une expérience fluide de gestion de notes avec filtrage, tri et états."
+      },
+      "portfolio-personal": {
+        "description": "Développement d'un portfolio personnel responsive avec design moderne, animations et navigation fluide.",
+        "detailed": "Développement de mon portfolio personnel, une plateforme conçue pour présenter de manière professionnelle mon expérience, mes projets et ma formation. Elle comprend des sections organisées et esthétiques mettant en valeur mes compétences et mon parcours, offrant une expérience utilisateur intuitive et responsive."
+      },
+      "mundo-gaming": {
+        "description": "Portail web gaming personnalisé qui simule une plateforme de divertissement moderne avec une interface futuriste et des effets visuels marquants.",
+        "detailed": "Le projet présente un design entièrement responsive avec des animations fluides, des menus interactifs et une esthétique gaming professionnelle avec des couleurs néon et des effets de lueur. Il inclut une navigation intuitive, un catalogue organisé de films/séries et des composants modulaires créant une expérience visuelle immersive. L'application met en avant mes compétences en développement frontend moderne, en créant des interfaces attrayantes et fonctionnelles qui allient design visuel percutant et convivialité optimisée. Un exemple parfait de la transformation d'une idée créative en une application web entièrement fonctionnelle et visuellement spectaculaire."
+      }
+    }
+  },
+  "education": {
+    "heading": "Éducation & Formation",
+    "items": {
+      "1": {
+        "degree": "Technicien supérieur en développement d'applications web",
+        "institution": "Réalisé au Centre de formation professionnelle Ilerna"
+      },
+      "2": {
+        "degree": "Cours de bureautique. Applications informatiques de gestion",
+        "institution": "Cours réalisé chez Mauprev, S.L."
+      },
+      "3": {
+        "degree": "Cours d'apprentissage coopératif : fondements, techniques et application en classe",
+        "institution": "Cours réalisé à l'Université Antonio de Nebrija"
+      },
+      "4": {
+        "degree": "Cours d'activités périscolaires : bases, types et développement",
+        "institution": "Cours réalisé à l'Université Antonio de Nebrija"
+      },
+      "5": {
+        "degree": "Licence en Éducation de la Petite Enfance (Programme 2010)",
+        "institution": "Licence réalisée à l'Université d'Almería"
+      }
+    }
+  },
+  "contact": {
+    "heading": "Contact",
+    "infoHeading": "Informations de contact",
+    "socialHeading": "Suivez-moi sur les réseaux sociaux",
+    "formHeading": "Envoyez-moi un message",
+    "name": "Nom",
+    "email": "Email",
+    "subject": "Objet",
+    "message": "Message",
+    "namePlaceholder": "Votre nom",
+    "emailPlaceholder": "votre@email.com",
+    "subjectPlaceholder": "Objet du message",
+    "messagePlaceholder": "Écrivez votre message ici...",
+    "send": "Envoyer le message",
+    "sending": "Envoi...",
+    "success": "Merci ! Votre message a été envoyé avec succès.",
+    "error": "Une erreur s'est produite. Veuillez réessayer.",
+    "validation": {
+      "nameRequired": "Le nom est obligatoire",
+      "emailRequired": "L'e-mail est obligatoire",
+      "emailInvalid": "Entrez un e-mail valide",
+      "subjectRequired": "L'objet est obligatoire",
+      "messageRequired": "Le message est obligatoire"
+    }
+  }
+}

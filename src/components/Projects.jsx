@@ -1,7 +1,39 @@
 import React, { useState } from 'react'
+import { SiAngular, SiTailwindcss, SiSymfony, SiPhp, SiDocker, SiHtml5, SiCss3, SiJavascript, SiMysql, SiPhpmyadmin, SiXampp, SiReact, SiVite, SiVercel, SiGit, SiGithub, SiTypescript, SiPostcss } from 'react-icons/si'
+import { useTranslation } from 'react-i18next'
 
 const Projects = () => {
   const [expandedProjects, setExpandedProjects] = useState({})
+  const { t } = useTranslation()
+
+  // Mapa categorías (ES) -> claves i18n
+  const CATEGORY_KEY_MAP = {
+    'Experiencia Profesional': 'professional',
+    'Proyecto Académico': 'academic',
+    'Proyecto Personal': 'personal',
+  }
+
+  // Mapa de tecnologías a iconos y colores de marca
+  const TECH_ICON_MAP = {
+    Angular: { Icon: SiAngular, color: '#DD0031' },
+    'Tailwind CSS': { Icon: SiTailwindcss, color: '#38BDF8' },
+    Symfony: { Icon: SiSymfony, color: '#000000' },
+    PHP: { Icon: SiPhp, color: '#777BB4' },
+    Docker: { Icon: SiDocker, color: '#2496ED' },
+    HTML5: { Icon: SiHtml5, color: '#E34F26' },
+    CSS3: { Icon: SiCss3, color: '#1572B6' },
+    JavaScript: { Icon: SiJavascript, color: '#F7DF1E' },
+    TypeScript: { Icon: SiTypescript, color: '#3178C6' },
+    MySQL: { Icon: SiMysql, color: '#4479A1' },
+    phpMyAdmin: { Icon: SiPhpmyadmin, color: '#6C78AF' },
+    Xampp: { Icon: SiXampp, color: '#FB7A24' },
+    React: { Icon: SiReact, color: '#61DAFB' },
+    Vite: { Icon: SiVite, color: '#646CFF' },
+    Vercel: { Icon: SiVercel, color: '#000000' },
+    Git: { Icon: SiGit, color: '#F05032' },
+    GitHub: { Icon: SiGithub, color: '#181717' },
+    PostCSS: { Icon: SiPostcss, color: '#DD3A0A' }
+  }
 
   const toggleExpanded = (projectId) => {
     setExpandedProjects(prev => ({
@@ -83,7 +115,7 @@ const Projects = () => {
     <section id="projects" className="py-12 sm:py-16 lg:py-20 bg-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 lg:mb-16 text-slate-800">
-          Proyectos & Experiencia
+          {t('projects.heading')}
         </h2>
         
         {categoryOrder.map((category) => (
@@ -99,7 +131,7 @@ const Projects = () => {
                   <div className="relative flex justify-center">
                     <div className="bg-gradient-to-r from-slate-700 to-slate-800 text-white px-4 sm:px-6 lg:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl shadow-xl border-2 sm:border-4 border-white">
                       <h3 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold tracking-wide">
-                        {category}
+                        {CATEGORY_KEY_MAP[category] ? t(`projects.categories.${CATEGORY_KEY_MAP[category]}`) : category}
                       </h3>
                       <div className="w-full h-1 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mt-2"></div>
                     </div>
@@ -157,14 +189,14 @@ const Projects = () => {
                       </div>
                       
                       <p className="text-sm sm:text-base text-slate-700 mb-3 sm:mb-4 leading-relaxed">
-                        {project.description}
+                        {t(`projects.items.${project.id}.description`, { defaultValue: project.description })}
                       </p>
                       
                       {/* Información expandida */}
                       {expandedProjects[project.id] && project.detailedDescription && (
                         <div className="mb-4 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border border-blue-200/50 shadow-inner">
                           <p className="text-sm text-slate-700 leading-relaxed">
-                            {project.detailedDescription}
+                            {t(`projects.items.${project.id}.detailed`, { defaultValue: project.detailedDescription })}
                           </p>
                         </div>
                       )}
@@ -187,21 +219,41 @@ const Projects = () => {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                           </svg>
                           <span className="group-hover:underline">
-                            {expandedProjects[project.id] ? 'Ocultar detalles' : 'Ver detalles'}
+                            {expandedProjects[project.id] ? t('projects.details.hide') : t('projects.details.show')}
                           </span>
                         </button>
                       )}
                       
                       {/* Tecnologías */}
                       <div className="flex flex-wrap gap-2">
-                        {project.tech.map((tech, index) => (
-                          <span 
-                            key={index}
-                            className="px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-slate-100 to-slate-50 text-slate-700 rounded-full text-xs sm:text-sm font-medium border border-slate-200 hover:border-slate-300 hover:shadow-md transition-all duration-200 hover:-translate-y-0.5"
-                          >
-                            {tech}
-                          </span>
-                        ))}
+                        {project.tech.map((tech, index) => {
+                          const conf = TECH_ICON_MAP[tech]
+                          if (!conf) {
+                            return (
+                              <span 
+                                key={index}
+                                className="px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-slate-100 to-slate-50 text-slate-700 rounded-full text-xs sm:text-sm font-medium border border-slate-200 hover:border-slate-300 hover:shadow-md transition-all duration-200 hover:-translate-y-0.5"
+                              >
+                                {tech}
+                              </span>
+                            )
+                          }
+                          return (
+                            <span
+                              key={index}
+                              title={tech}
+                              className="group flex items-center gap-2 rounded-xl border border-slate-200/80 bg-white/70 backdrop-blur-sm px-2.5 py-1.5 sm:px-3 sm:py-2 shadow-sm hover:shadow-md transition-all duration-200 transform-gpu hover:-translate-y-0.5"
+                            >
+                              {React.createElement(conf.Icon, {
+                                className: 'w-4 h-4 sm:w-5 sm:h-5 drop-shadow-[0_1px_1px_rgba(0,0,0,0.12)]',
+                                style: { color: conf.color },
+                                'aria-hidden': true,
+                              })}
+                              <span className="hidden md:inline text-xs sm:text-sm font-medium text-slate-700">{tech}</span>
+                              <span className="sr-only">{tech}</span>
+                            </span>
+                          )
+                        })}
                       </div>
                     </div>
                   </div>

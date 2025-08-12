@@ -1,0 +1,119 @@
+{
+  "nav": { "home": "INICIO", "about": "SOBRE MÍ", "projects": "PROYECTOS", "education": "EDUCACIÓN", "contact": "CONTACTO", "cv": "CV" },
+  "hero": {
+    "name": "José Manuel García",
+    "title": "Técnico Superior en Desarrollo de Aplicaciones Web",
+    "subtitle1": "Desarrollador Web Full Stack",
+    "subtitle2": "Apasionado del deporte, la tecnología y los retos creativos",
+    "subtitle3": "Diseño y desarrollo soluciones web modernas, funcionales y seguras",
+    "cta": "Ver mis proyectos",
+    "location": "Almería, España"
+  },
+  "cv": {
+    "download": "Descargar PDF",
+    "viewOnline": "Ver online",
+    "section": {
+      "heading": "Curriculum Vitae",
+      "intro": "Descarga mi CV completo para conocer más detalles sobre mi experiencia, educación y habilidades técnicas.",
+      "lastUpdated": "Última actualización: Agosto 2025",
+      "stats": {
+        "experience": { "title": "Experiencia", "value": "2 años en desarrollo web" },
+        "education": { "title": "Educación", "value": "Desarrollador de Aplicaciones Web" },
+        "skills": { "title": "Habilidades", "value": "Frontend & Backend" }
+      }
+    },
+    "footer": {
+      "rights": "© 2025 José Manuel García Muñoz. Todos los derechos reservados.",
+      "builtWith": "Portfolio desarrollado con React, Vite y Tailwind CSS"
+    }
+  },
+  "about": {
+    "heading": "Sobre mí",
+    "p1": "<b>Técnico Superior en Desarrollo de Aplicaciones Web</b>, desarrollo y mantenimiento de soluciones web modernas.",
+    "p2": "Me gusta escribir código limpio, reutilizable y escalable, aplicando buenas prácticas y metodologías ágiles. <b>Valoro el trabajo en equipo</b>, la organización y la mejora continua.",
+    "p3": "Soy una persona curiosa, proactiva y con una gran capacidad de aprendizaje. Me apasiona el deporte, lo que ha reforzado en mí valores como <b>la constancia, el esfuerzo y el compromiso</b>, que también aplico en mi carrera como desarrollador.",
+    "p4": "Actualmente <b>busco oportunidades para crecer profesionalmente</b> en entornos donde pueda aportar mis conocimientos, seguir aprendiendo y colaborar en proyectos desafiantes que aporten valor real.",
+    "skills": "Tecnologías principales"
+  },
+  "projects": {
+    "heading": "Proyectos & Experiencia",
+    "categories": {
+      "professional": "Experiencia Profesional",
+      "academic": "Proyecto Académico",
+      "personal": "Proyecto Personal"
+    },
+    "details": { "show": "Ver detalles", "hide": "Ocultar detalles" },
+    "items": {
+      "codearts-invoice": {
+        "description": "Durante mis prácticas colaboré en el desarrollo de una aplicación empresarial para la gestión financiera y administración de facturas.",
+        "detailed": "Desarrollo de una aplicación web completa para la gestión financiera empresarial con dashboard interactivo y visualización de datos en tiempo real. La aplicación permite el control integral de facturas con diferentes estados, generación automática de reportes en PDF y filtrado por períodos temporales. Incluye métricas clave como ingresos totales, facturas pendientes, pagadas y vencidas, con gráficos dinámicos para análisis de rendimiento por gestor."
+      },
+      "liberty-tattoo-studio": {
+        "description": "Desarrollo completo de aplicación web para estudio de tatuajes real. Sistema de gestión de tatuadores, portafolios, reservas de citas.",
+        "detailed": "Desarrollo de una página web profesional para Liberty Tattoo Studio, un estudio de tatuajes real situado en Almería. La plataforma permite gestionar citas online, mostrar el portafolio de cada tatuador y ofrecer contenido visual atractivo. Incluye páginas personalizadas para los artistas y un sistema de contacto directo con los clientes. Diseñada para mejorar la presencia digital del negocio y optimizar su gestión diaria. Cuenta con un sistema de gestión de citas conectado a una base de datos, para facilitar la comunicación y la experiencia del cliente. Proyecto realizado en colaboración directa con el propietario del estudio."
+      },
+      "task-list-manager": {
+        "description": "Aplicación completa de gestión de tareas con funcionalidades avanzadas de búsqueda, ordenación y organización.",
+        "detailed": "La aplicación es una lista de notas que permite añadir nuevas tareas con validación del título. Hay búsqueda en tiempo real que ignora mayúsculas y minúsculas para filtrar por nombre. Las tareas se pueden marcar como realizadas; al hacerlo se tachan visualmente con un check y se desplazan automáticamente al final de la lista para mantener foco en lo pendiente. También se pueden eliminar individualmente. El usuario puede ordenar el listado alfabéticamente, tanto de A a Z como de Z a A, con botones claros que disparan esa ordenación en el frontend. La aplicación se integra con un backend (Symfony), y se muestran notificaciones (toasts) para feedback al usuario. En conjunto ofrece una experiencia fluida de gestión de notas con funcionalidades de filtrado, ordenación y estado."
+      },
+      "portfolio-personal": {
+        "description": "Desarrollo de portfolio personal responsive con diseño moderno, animaciones y navegación fluida.",
+        "detailed": "Desarrollo de mi portfolio personal, una plataforma diseñada para mostrar mi experiencia, proyectos y formación de manera profesional. Incluye secciones organizadas y visualmente atractivas que destacan mis habilidades y trayectoria, ofreciendo una experiencia de usuario intuitiva y responsiva."
+      },
+      "mundo-gaming": {
+        "description": "Portal web gaming personalizado que simula una plataforma de entretenimiento moderna con una interfaz futurista y efectos visuales llamativos.",
+        "detailed": " El proyecto presenta un diseño completamente responsive con animaciones fluidas, menús interactivos y una estética gaming profesional con colores neón y efectos de brillo. Incluye navegación intuitiva, catálogo de películas/series organizadas, y componentes modulares que crean una experiencia visual inmersiva. La aplicación demuestra mis habilidades en desarrollo frontend moderno, creando interfaces atractivas y funcionales que combinan diseño visual impactante con usabilidad optimizada. Un ejemplo perfecto de cómo transformar una idea creativa en una aplicación web completamente funcional y visualmente espectacular."
+      }
+    }
+  },
+  "education": {
+    "heading": "Educación & Formación",
+    "items": {
+      "1": {
+        "degree": "Grado Superior en Desarrollo de Aplicaciones Web",
+        "institution": "Realizado en el Centro FP Ilerna"
+      },
+      "2": {
+        "degree": "Curso de Ofimática. Aplicaciones informáticas de gestión",
+        "institution": "Curso realizado en Mauprev, S.L."
+      },
+      "3": {
+        "degree": "Curso de Aprendizaje Cooperativo: fundamentos, técnicas y aplicación en el aula",
+        "institution": "Curso realizado en la Universidad de Antonio de Nebrija"
+      },
+      "4": {
+        "degree": "Curso de Actividades extraescolares: bases, tipos y desarrollo",
+        "institution": "Curso realizado en la Universidad de Antonio de Nebrija"
+      },
+      "5": {
+        "degree": "Grado en Educación Infantil (Plan 2010)",
+        "institution": "Grado realizado en la Universidad de Almería"
+      }
+    }
+  },
+  "contact": {
+    "heading": "Contacto",
+    "infoHeading": "Información de contacto",
+    "socialHeading": "Sígueme en redes sociales",
+    "formHeading": "Envíame un mensaje",
+    "name": "Nombre",
+    "email": "Email",
+    "subject": "Asunto",
+    "message": "Mensaje",
+    "namePlaceholder": "Tu nombre",
+    "emailPlaceholder": "tu@email.com",
+    "subjectPlaceholder": "Asunto del mensaje",
+    "messagePlaceholder": "Escribe tu mensaje aquí...",
+    "send": "Enviar mensaje",
+    "sending": "Enviando...",
+    "success": "¡Gracias! Tu mensaje se ha enviado correctamente.",
+    "error": "Ha ocurrido un error. Por favor, inténtalo de nuevo.",
+    "validation": {
+      "nameRequired": "El nombre es obligatorio",
+      "emailRequired": "El correo es obligatorio",
+      "emailInvalid": "Introduce un correo válido",
+      "subjectRequired": "El asunto es obligatorio",
+      "messageRequired": "El mensaje es obligatorio"
+    }
+  }
+}
