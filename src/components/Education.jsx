@@ -31,7 +31,7 @@ const Education = () => {
     {
       id: 5,
       degree: "Grado en Educación Infantil (Plan 2010)",
-      institution: "Carrera realizada en la Universidad de Almería",
+      institution: "Grado realizado en la Universidad de Almería",
       period: "2013-2017",
       description: ""
     }
