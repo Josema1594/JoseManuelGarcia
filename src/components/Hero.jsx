@@ -94,17 +94,20 @@ const Hero = () => {
             {t('hero.name')}
           </h1>
           
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-light mb-6 sm:mb-8 leading-relaxed text-white" style={{ textShadow: '2px 2px 6px rgba(0,0,0,0.8)' }}>
-            {text}
-            <span className="blinking-cursor">|</span>
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-light mb-6 sm:mb-8 leading-relaxed text-white relative" style={{ textShadow: '2px 2px 6px rgba(0,0,0,0.8)' }}>
+            {/* Placeholder invisible que ocupa el alto final para evitar desplazamientos */}
+            <span className="invisible">{fullText}</span>
+            {/* Texto tipeado superpuesto */}
+            <span className="absolute inset-0">
+              {text}
+              <span className="blinking-cursor">|</span>
+            </span>
           </p>
           
           <p className="text-sm sm:text-base md:text-lg lg:text-xl font-light mb-8 sm:mb-2 leading-relaxed text-white/80 max-w-3xl">
-            {t('hero.subtitle1')}
-            <br className="hidden sm:block" />
-            {t('hero.subtitle2')}
-            <br className="hidden sm:block" />
-            {t('hero.subtitle3')}
+            <span className="block">{t('hero.subtitle1')}</span>
+            <span className="block">{t('hero.subtitle2')}</span>
+            <span className="block">{t('hero.subtitle3')}</span>
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 lg:gap-6 mb-6 sm:mb-8">
             <button 
