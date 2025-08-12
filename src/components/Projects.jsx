@@ -15,7 +15,7 @@ const Projects = () => {
       id: "codearts-invoice",
       title: "Codearts Invoice", 
       description: "Durante mis prácticas colaboré en el desarrollo de una aplicación empresarial para la gestión financiera y administración de facturas.",
-      detailedDescription: "Desarrollo de una aplicación web completa para la gestión financiera empresarial con dashboard interactivo y visualización de datos en tiempo real. La aplicación permite el control integral de facturas con diferentes estados, generación automática de reportes en PDF y filtrado por períodos temporales. Incluye métricas clave como ingresos totales, facturas pendientes, pagadas y vencidas, con gráficos dinámicos para análisis de rendimiento por gestor. El sistema cuenta con autenticación segura, diseño responsivo y arquitectura escalable optimizada para empresas.",
+      detailedDescription: "Desarrollo de una aplicación web completa para la gestión financiera empresarial con dashboard interactivo y visualización de datos en tiempo real. La aplicación permite el control integral de facturas con diferentes estados, generación automática de reportes en PDF y filtrado por períodos temporales. Incluye métricas clave como ingresos totales, facturas pendientes, pagadas y vencidas, con gráficos dinámicos para análisis de rendimiento por gestor.",
       tech: ["Angular", "Tailwind CSS", "Symfony", "PHP", "Docker"],
       image: "codearts1.png",
       category: "Experiencia Profesional",
@@ -109,12 +109,9 @@ const Projects = () => {
 
               <div className="space-y-6 sm:space-y-8">
                 {groupedProjects[category].map((project) => (
-                  <div key={project.id} className="group bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 sm:hover:-translate-y-2 border-l-4 flex flex-col md:flex-row">
-                    {/* Borde lateral colorido */}
-                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 to-purple-600" aria-hidden="true"></div>
-
+                  <div key={project.id} className="group bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 sm:hover:-translate-y-2 flex flex-col md:flex-row">
                     {project.image && (
-                      <div className="w-full md:w-2/5 cursor-pointer md:group-hover:scale-105 transition-transform duration-500 relative overflow-hidden order-1 md:order-none">
+                      <div className="w-full md:w-2/5 cursor-pointer md:group-hover:scale-105 transition-transform duration-500 relative overflow-hidden order-1 md:order-none md:flex md:items-center md:justify-center">
                         <a 
                           href={`/${project.image}`}
                           target="_blank"

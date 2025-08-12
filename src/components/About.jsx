@@ -7,13 +7,13 @@ const About = () => {
       className="py-12 sm:py-16 lg:py-20 bg-gradient-to-r from-blue-50 to-slate-50"
     >
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-center mb-12 lg:mb-16 text-slate-800">
+        <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-center mb-6 sm:mb-12 lg:mb-16 text-slate-800">
           Sobre mí
         </h2>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start">
           {/* Contenido de texto */}
-          <div className="space-y-3 lg:space-y-8 order-2 lg:order-1 text-center lg:text-left lg:pl-24">
+          <div className="space-y-3 lg:space-y-8 order-2 lg:order-1 text-center lg:text-left lg:pl-24 max-w-md sm:max-w-lg mx-auto px-4 sm:px-6 lg:max-w-none lg:px-0">
             <div className="prose prose-sm lg:prose-base max-w-none">
               <p className="text-xs sm:text-sm lg:text-base text-slate-600 leading-relaxed mb-2 lg:mb-4">
                 Técnico Superior en Desarrollo de Aplicaciones Web, desarrollo y mantenimiento de soluciones web modernas.
