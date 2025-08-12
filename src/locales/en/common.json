@@ -1,0 +1,119 @@
+{
+  "nav": { "home": "HOME", "about": "ABOUT", "projects": "PROJECTS", "education": "EDUCATION", "contact": "CONTACT", "cv": "CV" },
+  "hero": {
+    "name": "José Manuel García",
+    "title": "Higher Technician in Web Application Development",
+    "subtitle1": "Full Stack Web Developer",
+    "subtitle2": "Passionate about sports, technology and creative challenges",
+    "subtitle3": "I design and develop modern, functional and secure web solutions",
+    "cta": "View my projects",
+    "location": "Almería, Spain"
+  },
+  "cv": {
+    "download": "Download PDF",
+    "viewOnline": "View online",
+    "section": {
+      "heading": "Curriculum Vitae",
+      "intro": "Download my full CV to learn more about my experience, education, and technical skills.",
+      "lastUpdated": "Last updated: August 2025",
+      "stats": {
+        "experience": { "title": "Experience", "value": "2 years in web development" },
+        "education": { "title": "Education", "value": "Web Applications Developer" },
+        "skills": { "title": "Skills", "value": "Frontend & Backend" }
+      }
+    },
+    "footer": {
+      "rights": "© 2025 José Manuel García Muñoz. All rights reserved.",
+      "builtWith": "Portfolio built with React, Vite and Tailwind CSS"
+    }
+  },
+  "about": {
+    "heading": "About me",
+    "p1": "<b>Higher Technician in Web Application Development</b>, I develop and maintain modern web solutions.",
+    "p2": "I like writing clean, reusable and scalable code, following best practices and agile methodologies. <b>I value teamwork</b>, organization and continuous improvement.",
+    "p3": "I'm a curious and proactive person with great learning capacity. I'm passionate about sports, which has strengthened values such as <b>perseverance, effort and commitment</b> that I also apply to my developer career.",
+    "p4": "I'm currently <b>seeking opportunities to grow professionally</b> in environments where I can contribute my knowledge, keep learning and collaborate on challenging projects that deliver real value.",
+    "skills": "Core technologies"
+  },
+  "projects": {
+    "heading": "Projects & Experience",
+    "categories": {
+      "professional": "Professional Experience",
+      "academic": "Academic Project",
+      "personal": "Personal Project"
+    },
+    "details": { "show": "Show details", "hide": "Hide details" },
+    "items": {
+      "codearts-invoice": {
+        "description": "During my internship I collaborated in the development of a business application for financial management and invoice administration.",
+        "detailed": "Development of a complete web application for business financial management with an interactive dashboard and real-time data visualization. The app enables comprehensive control of invoices with different statuses, automatic PDF report generation and filtering by time periods. It includes key metrics such as total revenue, pending, paid and overdue invoices, with dynamic charts for manager performance analysis."
+      },
+      "liberty-tattoo-studio": {
+        "description": "Full development of a web application for a real tattoo studio. Management system for tattoo artists, portfolios, and appointment bookings.",
+        "detailed": "Development of a professional website for Liberty Tattoo Studio, a real tattoo studio located in Almería. The platform allows online appointment management, showcases each artist's portfolio, and provides engaging visual content. It includes customized pages for artists and a direct contact system with clients. Designed to enhance the business's digital presence and optimize daily operations. It features an appointment management system connected to a database to facilitate communication and the customer experience. Project carried out in direct collaboration with the studio owner."
+      },
+      "task-list-manager": {
+        "description": "Full task management application with advanced search, sorting and organization features.",
+        "detailed": "The application is a notes list that allows adding new tasks with title validation. There is real-time search that ignores case to filter by name. Tasks can be marked as completed; when done, they are visually crossed out with a check and automatically moved to the end of the list to keep focus on pending items. They can also be deleted individually. The user can sort the list alphabetically, both A–Z and Z–A, with clear buttons triggering that sorting on the frontend. The application integrates with a backend (Symfony), and toasts are displayed for user feedback. Overall, it provides a smooth note management experience with filtering, sorting and state features."
+      },
+      "portfolio-personal": {
+        "description": "Development of a responsive personal portfolio with a modern design, animations and smooth navigation.",
+        "detailed": "Development of my personal portfolio, a platform designed to professionally showcase my experience, projects and education. It includes organized and visually appealing sections that highlight my skills and background, offering an intuitive and responsive user experience."
+      },
+      "mundo-gaming": {
+        "description": "Custom gaming web portal that simulates a modern entertainment platform with a futuristic interface and striking visual effects.",
+        "detailed": "The project features a fully responsive design with smooth animations, interactive menus and a professional gaming aesthetic with neon colors and glow effects. It includes intuitive navigation, an organized catalog of movies/series, and modular components that create an immersive visual experience. The app demonstrates my skills in modern frontend development, creating attractive and functional interfaces that combine impactful visual design with optimized usability. A perfect example of how to transform a creative idea into a fully functional and visually spectacular web application."
+      }
+    }
+  },
+  "education": {
+    "heading": "Education & Training",
+    "items": {
+      "1": {
+        "degree": "Higher Technician in Web Application Development",
+        "institution": "Completed at Ilerna Vocational Training Center"
+      },
+      "2": {
+        "degree": "Office Automation Course. Computer Applications for Management",
+        "institution": "Course completed at Mauprev, S.L."
+      },
+      "3": {
+        "degree": "Cooperative Learning Course: Fundamentals, Techniques and Classroom Application",
+        "institution": "Course completed at Antonio de Nebrija University"
+      },
+      "4": {
+        "degree": "Extracurricular Activities Course: Basics, Types and Development",
+        "institution": "Course completed at Antonio de Nebrija University"
+      },
+      "5": {
+        "degree": "Bachelor's Degree in Early Childhood Education (2010 Curriculum)",
+        "institution": "Degree completed at the University of Almería"
+      }
+    }
+  },
+  "contact": {
+    "heading": "Contact",
+    "infoHeading": "Contact information",
+    "socialHeading": "Follow me on social media",
+    "formHeading": "Send me a message",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "your@email.com",
+    "subjectPlaceholder": "Message subject",
+    "messagePlaceholder": "Write your message here...",
+    "send": "Send message",
+    "sending": "Sending...",
+    "success": "Thanks! Your message has been sent successfully.",
+    "error": "Something went wrong. Please try again.",
+    "validation": {
+      "nameRequired": "Name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Enter a valid email",
+      "subjectRequired": "Subject is required",
+      "messageRequired": "Message is required"
+    }
+  }
+}
