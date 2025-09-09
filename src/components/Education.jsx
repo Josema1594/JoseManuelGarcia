@@ -4,6 +4,13 @@ const Education = () => {
   const { t } = useTranslation()
   const education = [
     {
+      id: 0,
+      degree: "Curso de Introducción a Drupal 11",
+      institution: "Curso realizado en FORCONTU",
+      period: "2025",
+      description: ""
+    },
+    {
       id: 1,
       degree: "Grado Superior en Desarrollo de Aplicaciones Web",
       institution: "Realizado en el Centro FP Ilerna",
@@ -42,7 +49,7 @@ const Education = () => {
 
   return (
     <section id="education" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-center mb-12 lg:mb-16 text-slate-800">
           {t('education.heading')}
         </h2>
@@ -58,7 +65,7 @@ const Education = () => {
                 <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full border-4 border-white shadow-lg z-10"></div>
                 
                 {/* Contenido */}
-                <div className={`w-full lg:w-5/12 ${index % 2 === 0 ? 'lg:pr-8' : 'lg:pl-8'}`}>
+                <div className={`w-full lg:w-6/12 ${index % 2 === 0 ? 'lg:pr-8' : 'lg:pl-8'}`}>
                   <div className="group bg-white rounded-2xl shadow-xl p-6 lg:p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-slate-200">
                     {/* Header con año */}
                     <div className="flex justify-between items-start mb-4">
@@ -93,7 +100,7 @@ const Education = () => {
                 </div>
                 
                 {/* Espacio vacío para el otro lado en desktop */}
-                <div className="hidden lg:block w-5/12"></div>
+                <div className="hidden lg:block w-4/12"></div>
               </div>
             ))}
           </div>
